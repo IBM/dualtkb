@@ -33,7 +33,10 @@ Over the next weeks, We will make code and dataset description available here.
 }
 ```
 
+---
+
 ## DualTKB
+
 ### Introduction
 
 Capturing and structuring common knowledge from the real world to make it available to computer systems is one of the foundational principles of [IBM Research](https://www.research.ibm.com/).
@@ -90,7 +93,7 @@ Given the lack of supervised dataset for the task of KB-Text cross-domain transl
 
 We compared the performance of DualTKB to published prior-work baselines for the task of link prediction.The table below shows results of  MRR and HITS, both well-established metrics for evaluating the quality of link completion. DualTKB compares favorably with the competitors, enabling accurate link completion.
 
-![Table](../assets/img/dualtkb_table.png?raw=true)
+![Table](../assets/img/dualtkb_table.png?raw=true | width=400)
 
 For a more qualitative evaluation of cross-domain generation, we provide examples of transfer from multiple sentences to paths (composing a graph) on the left, and on the right the reverse operation of sentence generation from a list of given paths.
 
