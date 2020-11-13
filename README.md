@@ -62,14 +62,15 @@ DualTKB is a novel approach to define a dual learning bridge between text and Kn
 
 Since we designed DualTKB to be bi-directional, our approach has the ability to translate (or transfer) to and from modalities natively. Translation cycles can therefore be defined to enforce consistency in generation. For instance, DualTKB can transfer a sentence to the KB domain, take this generated path and translate it back to the text domain. This is key to the dual learning process where translation cycles must return to the original domain with semantic consistency (in our example, we should translate back to a sentence that is either the original sentence, or a sentence semantically very close to it).
 
-These consistency translation cycles were originally motivated by the lack of parallel data for cross-domain generation tasks. By relying on these transfer cycles, our approach handles unsupervised settings natively. In the diagram below, we give examples of all the translation cycles that DualTKB can handle. For instance, from the Text domain, we can transfer to the KB domain, using <img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BAB%7D%7D">,  and then translate-back to text by using ![TABA](<img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BABA%7D%7D">). We can also do a same-domain transfer by using ![TAA](<img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BAA%7D%7D">).
+These consistency translation cycles were originally motivated by the lack of parallel data for cross-domain generation tasks. By relying on these transfer cycles, our approach handles unsupervised settings natively. In the diagram below, we give examples of all the translation cycles that DualTKB can handle. For instance, from the Text domain, we can transfer to the KB domain, using <img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BAB%7D%7D">,  and then translate-back to text by using <img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BABA%7D%7D">. We can also do a same-domain transfer by using <img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BAA%7D%7D">.
 
 ![Cycles](../assets/img/dualtkb_cycles-246x300.png?raw=true)
 
 
 ### Our Model
 
-The proposed model follows an encoder-decoder architecture, where the encoder projects text xA   or path in a graph xB  to a common high dimensional representation. It is then passed through a specialized decoder (Decoder A or Decoder B) which can either do a reconstruction of the same modality (auto-encoding) xAA or xBB  or do the transfer to a different modality  xAB or xBA .
+The proposed model follows an encoder-decoder architecture, where the encoder projects text <img src="https://render.githubusercontent.com/render/math?math=x_%5Ctext%7BA%7D"> 
+or path in a graph <img src="https://render.githubusercontent.com/render/math?math=x_%5Ctext%7BB%7D">  to a common high dimensional representation. It is then passed through a specialized decoder (Decoder A or Decoder B) which can either do a reconstruction of the same modality (auto-encoding) <img src="https://render.githubusercontent.com/render/math?math=x_%5Ctext%7BAA%7D"> or <img src="https://render.githubusercontent.com/render/math?math=x_%5Ctext%7BBB%7D">  or do the transfer to a different modality <img src="https://render.githubusercontent.com/render/math?math=x_%5Ctext%7BAB%7D"> or <img src="https://render.githubusercontent.com/render/math?math=x_%5Ctext%7BBA%7D"> .
 
 ![Encoder Decoder](../assets/img/dualtkb_encdec-300x117.png?raw=true)
 
@@ -79,11 +80,11 @@ For this purpose we propose to augment the traditional supervised training, when
 
 ![Dual Stage](../assets/img/dualtkb_stages-768x247.png?raw=true)
 
-The training process can be decomposed into a translation stage (LREC, LSUP) followed by a back-translation stage (LBT). Inherently, the model can natively deal with both supervised and unsupervised data. A more detailed description on the training method can be found in the paper.
+The training process can be decomposed into a translation stage (<img src="https://render.githubusercontent.com/render/math?math=L_%5Ctext%7BREC%7D">, <img src="https://render.githubusercontent.com/render/math?math=L_%5Ctext%7BSUP%7D">) followed by a back-translation stage (<img src="https://render.githubusercontent.com/render/math?math=L_%5Ctext%7BBT%7D">). Inherently, the model can natively deal with both supervised and unsupervised data. A more detailed description on the training method can be found in the paper.
 
 ### Our Dataset
 
-Given the lack of supervised dataset for the task of KB-Text cross-domain translation, one of our contributions is the creation of a dataset based on the widely used ConceptNet KB and Open Mind Common Sense (OMCS) list of commonsense fact sentences. Since ConceptNet was derived from OMCS, we decided to employ fuzzy matching techniques to create a weakly supervised dataset by mapping ConceptNet to OMCS. This resulted in a parallel dataset of 100K edges for 250K sentences. We are planning to release details and describe the heuristics involved in creating this dataset by fuzzy matching. In the meantime, some information can be found on our website  https://github.com/IBM/dualtkb, and in our paper.
+Given the lack of supervised dataset for the task of KB-Text cross-domain translation, one of our contributions is the creation of a dataset based on the widely used ConceptNet KB and Open Mind Common Sense (OMCS) list of commonsense fact sentences. Since ConceptNet was derived from OMCS, we decided to employ fuzzy matching techniques to create a weakly supervised dataset by mapping ConceptNet to OMCS. This resulted in a parallel dataset of 100K edges for 250K sentences. We are planning to release details and describe the heuristics involved in creating this dataset by fuzzy matching. In the meantime, some information can be found in our paper.
 
 ### Experiments
 
