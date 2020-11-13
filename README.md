@@ -36,3 +36,4 @@ Over the next weeks, We will make code and dataset description available here.
 ### Summary
 
 
+![demo](../assets/img/encdec_anime.gif?raw=true)
