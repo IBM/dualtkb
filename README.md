@@ -2,14 +2,14 @@
 
 This repository will be updated to include information about DualTKB.  
 If you want to know more about DualTKB, please read our [short description]()  
-More details can be found in ouur arXiv paper [DualTKB: A Dual Learning Bridge between Text and Knowledge Base](https://arxiv.org/abs/2010.14660).  
-It is similar than our [EMNLP'20 Paper](https://www.aclweb.org/anthology/2020.emnlp-main.694/) with updated figures  
+More details can be found in our arXiv paper [DualTKB: A Dual Learning Bridge between Text and Knowledge Base](https://arxiv.org/abs/2010.14660), similar to our [EMNLP'20 Paper](https://www.aclweb.org/anthology/2020.emnlp-main.694/) with updated figures
 
 ### EMNLP'20
-This work will be presented at the EMNLP’20 Gather Session 5D “Information Extraction” on 11/18/2020 at 1pm (UTC-5) US East Coast Time  
 
+This work will be presented at the EMNLP’20 Gather Session 5D “Information Extraction” on 11/18/2020 at 1pm (UTC-5) US East Coast Time
 
 ### Code and Dataset
+
 Over the next weeks, We will make code and dataset description available here.
 
 
@@ -62,7 +62,7 @@ DualTKB is a novel approach to define a dual learning bridge between text and Kn
 
 Since we designed DualTKB to be bi-directional, our approach has the ability to translate (or transfer) to and from modalities natively. Translation cycles can therefore be defined to enforce consistency in generation. For instance, DualTKB can transfer a sentence to the KB domain, take this generated path and translate it back to the text domain. This is key to the dual learning process where translation cycles must return to the original domain with semantic consistency (in our example, we should translate back to a sentence that is either the original sentence, or a sentence semantically very close to it).
 
-These consistency translation cycles were originally motivated by the lack of parallel data for cross-domain generation tasks. By relying on these transfer cycles, our approach handles unsupervised settings natively. In the diagram below, we give examples of all the translation cycles that DualTKB can handle. For instance, from the Text domain, we can transfer to the KB domain, using TAB,  and then translate-back to text by using TABA. We can also do a same-domain transfer by using TAA.
+These consistency translation cycles were originally motivated by the lack of parallel data for cross-domain generation tasks. By relying on these transfer cycles, our approach handles unsupervised settings natively. In the diagram below, we give examples of all the translation cycles that DualTKB can handle. For instance, from the Text domain, we can transfer to the KB domain, using ![TAB](<img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BAB%7D%7D">),  and then translate-back to text by using ![TABA](<img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BABA%7D%7D">). We can also do a same-domain transfer by using ![TAA](<img src="https://render.githubusercontent.com/render/math?math=T_%7B%5Ctext%7BAA%7D%7D">).
 
 ![Cycles](../assets/img/dualtkb_cycles-246x300.png?raw=true)
 
