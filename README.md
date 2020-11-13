@@ -93,7 +93,8 @@ Given the lack of supervised dataset for the task of KB-Text cross-domain transl
 
 We compared the performance of DualTKB to published prior-work baselines for the task of link prediction.The table below shows results of  MRR and HITS, both well-established metrics for evaluating the quality of link completion. DualTKB compares favorably with the competitors, enabling accurate link completion.
 
-![Table](../assets/img/dualtkb_table.png?raw=true)
+<img src="../assets/img/dualtkb_table.png?raw=true" width=300 align=center)
+
 
 For a more qualitative evaluation of cross-domain generation, we provide examples of transfer from multiple sentences to paths (composing a graph) on the left, and on the right the reverse operation of sentence generation from a list of given paths.
 
