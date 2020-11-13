@@ -35,5 +35,14 @@ Over the next weeks, We will make code and dataset description available here.
 
 ### Summary
 
+![Graph](../assets/img/intro_graph.png?raw=true)
 
-![demo](../assets/img/encdec_anime.gif?raw=true)
+![Inference](../assets/img/encdec_anime.gif?raw=true)
+
+![Cycles](../assets/img/dualtkb_cycles-246x300.png?raw=true)
+![Encoder Decoder](../assets/img/dualtkb_encdec-300x117.png?raw=true)
+![DualTKB examples](../assets/img/dualtkb_examples.jpeg?raw=true)
+![DualTKB Overview](../assets/img/dualtkb_overview.png?raw=true)
+![Stages](../assets/img/dualtkb_stages-768x247.png?raw=true)
+![Table](../assets/img/dualtkb_table.png?raw=true)
+
