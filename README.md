@@ -72,8 +72,8 @@ These consistency translation cycles were originally motivated by the lack of pa
 
 ### Our Model
 
-The proposed model follows an encoder-decoder architecture, where the encoder projects text <img src="https://render.githubusercontent.com/render/math?math=x_\text{A}"> 
-or path in a graph <img src="https://render.githubusercontent.com/render/math?math=x_\text{B}">  to a common high dimensional representation. It is then passed through a specialized decoder (Decoder A or Decoder B) which can either do a reconstruction of the same modality (auto-encoding) <img src="https://render.githubusercontent.com/render/math?math=x_\text{AA}"> or <img src="https://render.githubusercontent.com/render/math?math=x_\text{BB}">  or do the transfer to a different modality <img src="https://render.githubusercontent.com/render/math?math=x_\text{AB}"> or <img src="https://render.githubusercontent.com/render/math?math=x_\text{BA}"> .
+The proposed model follows an encoder-decoder architecture, where the encoder projects text <img src="https://render.githubusercontent.com/render/math?math=x_\text{A}" alt="x_A"> 
+or path in a graph <img src="https://render.githubusercontent.com/render/math?math=x_\text{B}" alt="x_B">  to a common high dimensional representation. It is then passed through a specialized decoder (Decoder A or Decoder B) which can either do a reconstruction of the same modality (auto-encoding) <img src="https://render.githubusercontent.com/render/math?math=x_\text{AA}" alt="x_AA"> or <img src="https://render.githubusercontent.com/render/math?math=x_\text{BB}" alt="x_BB"> or do the transfer to a different modality <img src="https://render.githubusercontent.com/render/math?math=x_\text{AB}" alt="x_AB"> or <img src="https://render.githubusercontent.com/render/math?math=x_\text{BA}" alt="x_BA">.
 
 ![Encoder Decoder](../assets/img/dualtkb_encdec-300x117.png?raw=true)
 
@@ -83,7 +83,7 @@ For this purpose we propose to augment the traditional supervised training, when
 
 ![Dual Stage](../assets/img/dualtkb_stages-768x247.png?raw=true)
 
-The training process can be decomposed into a translation stage (<img src="https://render.githubusercontent.com/render/math?math=L_\text{REC}">, <img src="https://render.githubusercontent.com/render/math?math=L_\text{SUP}">) followed by a back-translation stage (<img src="https://render.githubusercontent.com/render/math?math=L_\text{BT}">). Inherently, the model can natively deal with both supervised and unsupervised data. A more detailed description on the training method can be found in the paper.
+The training process can be decomposed into a translation stage (<img src="https://render.githubusercontent.com/render/math?math=L_\text{REC}" alt="L_REC">, <img src="https://render.githubusercontent.com/render/math?math=L_\text{SUP}" alt="L_SUP">) followed by a back-translation stage (<img src="https://render.githubusercontent.com/render/math?math=L_\text{BT}" alt="L_BT">). Inherently, the model can natively deal with both supervised and unsupervised data. A more detailed description on the training method can be found in the paper.
 
 ### Our Dataset
 
@@ -93,7 +93,7 @@ Given the lack of supervised dataset for the task of KB-Text cross-domain transl
 
 We compared the performance of DualTKB to published prior-work baselines for the task of link prediction.The table below shows results of  MRR and HITS, both well-established metrics for evaluating the quality of link completion. DualTKB compares favorably with the competitors, enabling accurate link completion.
 
-<img src="../assets/img/dualtkb_table.png?raw=true" width=600 align=center>
+<img src="../assets/img/dualtkb_table.png?raw=true" width=600 align=center alt="Table of results">
 
 
 For a more qualitative evaluation of cross-domain generation, we provide examples of transfer from multiple sentences to paths (composing a graph) on the left, and on the right the reverse operation of sentence generation from a list of given paths.
@@ -102,12 +102,12 @@ For a more qualitative evaluation of cross-domain generation, we provide example
 
 ### References
 
-[1] Bishan Yang, Wen-tau Yih, Xiaodong He, Jian-feng Gao, and Li Deng. 2015.Embedding Entities and Relations for Learning and Inference in Knowledge Bases. In Proceedings of the International Conference on Learning Representations (ICLR).
+[1] Bishan Yang, Wen-tau Yih, Xiaodong He, Jian-feng Gao, and Li Deng. 2015. [Embedding Entities and Relations for Learning and Inference in Knowledge Bases]((https://www.microsoft.com/en-us/research/publication/embedding-entities-and-relations-for-learning-and-inference-in-knowledge-bases/)). In Proceedings of the International Conference on Learning Representations (ICLR).
 
-[2] Théo Trouillon, Johannes Welbl, Sebastian Riedel, Éric Gaussier, and Guillaume Bouchard. 2016.Complex Embeddings for Simple Link Prediction. In ICML, pages 2071–2080
+[2] Théo Trouillon, Johannes Welbl, Sebastian Riedel, Éric Gaussier, and Guillaume Bouchard. 2016. [Complex Embeddings for Simple Link Prediction](http://proceedings.mlr.press/v48/trouillon16.pdf). In ICML, pages 2071–2080
 
-[3] Tim Dettmers, Pasquale Minervini, Pontus Stene-torp, and Sebastian Riedel. 2018.Convolutional2D Knowledge Graph Embeddings. In Thirty-Second AAAI Conference on Artificial Intelligence
+[3] Tim Dettmers, Pasquale Minervini, Pontus Stene-torp, and Sebastian Riedel. 2018. [Convolutional2D Knowledge Graph Embeddings](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/17366/15884). In Thirty-Second AAAI Conference on Artificial Intelligence
 
-[4] Chao Shang, Yun Tang, Jing Huang, Jinbo Bi, Xiaodong He, and Bowen Zhou. 2019. End-to-end Structure-Aware Convolutional Networks for Knowledge Base Completion. In AAAI.
+[4] Chao Shang, Yun Tang, Jing Huang, Jinbo Bi, Xiaodong He, and Bowen Zhou. 2019. [End-to-end Structure-Aware Convolutional Networks for Knowledge Base Completion](https://arxiv.org/abs/1811.04441). In AAAI.
 
-[5] Chaitanya Malaviya, Chandra Bhagavatula, Antoine Bosselut, and Yejin Choi. 2020. Commonsense Knowledge Base Completion with Structural and Semantic Context. Proceedings of the34th AAAI Conference on Artificial Intelligence.
+[5] Chaitanya Malaviya, Chandra Bhagavatula, Antoine Bosselut, and Yejin Choi. 2020. [Commonsense Knowledge Base Completion with Structural and Semantic Context](https://ojs.aaai.org//index.php/AAAI/article/view/5684). Proceedings of the 34th AAAI Conference on Artificial Intelligence.
