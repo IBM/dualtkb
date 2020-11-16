@@ -102,7 +102,7 @@ For a more qualitative evaluation of cross-domain generation, we provide example
 
 ### References
 
-[1] Bishan Yang, Wen-tau Yih, Xiaodong He, Jian-feng Gao, and Li Deng. 2015. [Embedding Entities and Relations for Learning and Inference in Knowledge Bases]((https://www.microsoft.com/en-us/research/publication/embedding-entities-and-relations-for-learning-and-inference-in-knowledge-bases/)). In Proceedings of the International Conference on Learning Representations (ICLR).
+[1] Bishan Yang, Wen-tau Yih, Xiaodong He, Jian-feng Gao, and Li Deng. 2015. [Embedding Entities and Relations for Learning and Inference in Knowledge Bases](https://www.microsoft.com/en-us/research/publication/embedding-entities-and-relations-for-learning-and-inference-in-knowledge-bases/). In Proceedings of the International Conference on Learning Representations (ICLR).
 
 [2] Théo Trouillon, Johannes Welbl, Sebastian Riedel, Éric Gaussier, and Guillaume Bouchard. 2016. [Complex Embeddings for Simple Link Prediction](http://proceedings.mlr.press/v48/trouillon16.pdf). In ICML, pages 2071–2080
 
