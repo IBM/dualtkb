@@ -49,7 +49,7 @@ The real-world information is often naturally organized as graphs (e.g., world w
 
 Graph representation of knowledge is a powerful tool to capture information around us and enables the creation of Knowledge Bases (KBs) encompassing information as Knowledge Graphs (KGs) so computer systems can efficiently learn from.
 
-Being able to process information embedded within knowledge graphs natively is part of IBM Research effort to create the foundations of [Trusting AI](https://www.research.ibm.com/artificial-intelligence/trusted-ai/), where we build and enable AI solutions people can trust.
+Being able to process information embedded within knowledge graphs natively is part of IBM Research effort to create the foundations of [Trusted AI](https://www.research.ibm.com/artificial-intelligence/trusted-ai/), where we build and enable AI solutions people can trust.
 
 IBM Research is particularly interested in the task of knowledge transfer from a Knowledge Graph to a more accessible, human-readable modality, such as text. Text is a natural medium for us humans to acquire knowledge by learning new facts, new concepts, new ideas.
 
@@ -95,7 +95,7 @@ During the training we minimize a total loss:
 \mathcal{L} = \mathcal{L}_{\text{REC}} + \mathcal{L}_{\text{BT}} + \mathcal{L}_{\text{SUP}}
 \end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0A%5Cmathcal%7BL%7D+%3D+%5Cmathcal%7BL%7D_%7B%5Ctext%7BREC%7D%7D+%2B+%5Cmathcal%7BL%7D_%7B%5Ctext%7BBT%7D%7D+%2B+%5Cmathcal%7BL%7D_%7B%5Ctext%7BSUP%7D%7D%0A%5Cend%7Balign%2A%7D)
 
-where the reconstruction loss <img src="https://render.githubusercontent.com/render/math?math=L_\text{REC}" alt="L_REC"> controls the quality of the autoencoding process:
+where the reconstruction loss <img src="https://render.githubusercontent.com/render/math?math=\mathcal{L}_\text{REC}" alt="L_REC"> controls the quality of the autoencoding process:
 
 ![\begin{align*}
 \mathcal{L}_{\text{REC}} \!=\!\!\!\!\! \underset{x_{\text{A}} \sim X}{\mathbb{E}}\left[-\log p_{\text{AA}}(x_{\text{A}})\right] + \!\!\! \underset{x_{\text{B}}  \sim X}{\mathbb{E}}\left[-\log p_{\text{BB}}(x_{\text{B}})\right],
