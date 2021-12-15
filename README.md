@@ -14,8 +14,7 @@ Join us at the Gather Session 5D “Information Extraction” on 11/18/2020 at 1
 
 # Code and Dataset
 
-Over the next weeks, We will make code and dataset description available here.
-
+The code base was completely rewritten for our new research publications. It is available at [ReGen](https://github.com/IBM/regen)
 
 # Citation
 ```
